@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	printf("Size of a char:" typeof(char)\n);
+	printf("Size of a char:", typeof(char)\n);
 	return (0);
 }
