@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 /**
  * main - Main entry point of execution in C
  *
@@ -6,6 +7,6 @@
  */
 int main(void)
 {
-	printf("Size of a char:", typeof(char)\n);
+    printf("Size of a char: %2d byte(s) \n", sizeof(char));
 	return (0);
 }
