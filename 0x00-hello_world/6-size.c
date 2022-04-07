@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 /**
  * main - Main entry point of execution in C
  *
