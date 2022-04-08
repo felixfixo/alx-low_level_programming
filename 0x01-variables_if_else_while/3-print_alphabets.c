@@ -12,6 +12,7 @@ int main(void)
 	{
 		putchar(ch);
 		char capitalLetter = toupper(ch);
+		
 		putchar(capitalLetter);
 		putchar('\n');
 	}
