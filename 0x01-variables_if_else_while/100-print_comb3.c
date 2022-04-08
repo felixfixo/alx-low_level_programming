@@ -7,30 +7,25 @@
  */
 int main(void)
 {
-	int i = 0;
-	int z = 1;
-	int y = 0;
-	int q = 0;
+	int i;
+	int j;
 
-	while (i < 9)
+	for (i = 0; i <= 9; i++)
 	{
-		if (y == 8 && z == 9 )
+		for (j = 0; j <= 9; j++)
 		{
-			break;
-		}
-		putchar(y + '0');
-		putchar(z + '0');
-		putchar(',');
-		putchar(' ');
-		if (i == 9){
-			y = y + 1;
-			z = y + 1;
-			i = 0;
-		}
-		else{
-			z++;
-			i++;
+			if (!(i == j) && i < j)
+			{
+				putchar(i + '0');
+				putchar(j + '0');
+				if (!(i == 8 && j == 9))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
