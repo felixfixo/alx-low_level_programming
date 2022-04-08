@@ -11,10 +11,7 @@ int main(void)
 
 	while (number < 10)
 	{
-		if(number == 9){
-			putchar(' ');
-		}
-		
+
 		putchar(number + '0');
 		if (number != 9)
 		{
