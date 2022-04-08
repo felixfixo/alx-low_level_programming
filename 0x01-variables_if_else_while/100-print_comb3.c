@@ -18,8 +18,8 @@ int main(void)
 		{
 			break;
 		}
-		putchar(y + '0');
-		putchar(z + '0');
+		printf("%d", y);
+		printf("%d", z );
 		putchar(',');
 		putchar(' ');
 		if (i == 9){
