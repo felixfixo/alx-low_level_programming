@@ -15,7 +15,7 @@ int main(void)
 	for (int i = 0; i <  16; i++)
 	{
 		int hexadecimal =  base_digits[i] % 16;
-		putchar(hexadecimal + '0');
+		putchar(hexadecimal + "0");
 		putchar('\n');
 		number++;
 	}
