@@ -9,7 +9,7 @@
 int main(void)
 {
 	char base_digits[16] = {'0', '1', '2', '3', '4', '5', '6', '7',
-    '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+'8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
 	for (int i = 0; i <  16; i++)
 	{
@@ -20,7 +20,8 @@ int main(void)
 
 			putchar(lowerCaseLetter);
 		}
-		else{
+		else
+		{
 			int hexadecimal =  base_digits[i] % 16;
 
 			putchar(hexadecimal + '0');
