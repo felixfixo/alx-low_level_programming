@@ -8,7 +8,7 @@
 int main(void)
 {
 	/* Declare variables */
-	int x,
+	int x;
 	int y;
 
 	for (x = 0; x < 100; x++)
