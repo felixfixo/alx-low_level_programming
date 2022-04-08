@@ -9,10 +9,13 @@ int main(void)
 {
 	int number = 0;
 
-	while (number < 16)
+	char base_digits[16] = {'0', '1', '2', '3', '4', '5', '6', '7',
+        '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+
+	for (int i = 0; i <  base_digits.length, i++)
 	{
-		int hexadecimal =  number % 16;
-		putchar('%x'+hexadecimal);
+		int hexadecimal =  base_digits[i] % 16;
+		putchar(exadecimal);
 		putchar('\n');
 		number++;
 	}
