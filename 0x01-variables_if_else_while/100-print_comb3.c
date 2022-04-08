@@ -25,6 +25,7 @@ int main(void)
 		if (i == 9){
 			y = y + 1;
 			z = y + 1;
+			i = 0;
 		}
 		else{
 			z++;
