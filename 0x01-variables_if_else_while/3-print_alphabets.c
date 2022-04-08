@@ -13,8 +13,7 @@ int main(void)
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		putchar(ch);
-		char capitalLetter = toupper(ch);
-	putchar(capitalLetter);
+	putchar(toupper(ch));
 	}
 	putchar('\n');
 	return (0);
