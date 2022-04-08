@@ -12,7 +12,7 @@ int main(void)
 	int y = 0;
 	int q = 0;
 
-	while (i < 9)
+	while (i <= 9)
 	{
 		// if (y == 8 && z == 9 )
 		// {
