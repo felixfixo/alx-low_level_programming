@@ -12,7 +12,7 @@ int main(void)
 '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 	int i;
 
-	for ( i = 0; i <  16; i++)
+	for (i = 0; i <  16; i++)
 	{
 		if (base_digits[i] == 'A' || base_digits[i] == 'B' || base_digits[i] == 'C'
 			|| base_digits[i] == 'D' || base_digits[i] == 'E' || base_digits[i] == 'F')
