@@ -7,6 +7,7 @@
  */
 int main(void)
 {
+	/* Declare variables */
 	int x,
 	int y;
 
@@ -16,6 +17,7 @@ int main(void)
 		{
 			if (x < y)
 			{
+				/* Print the numbers */
 				putchar((x / 10) + '0');
 				putchar((x % 10) + '0');
 				putchar(' ');
