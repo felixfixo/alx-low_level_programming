@@ -11,8 +11,8 @@ int main(void)
 	for (char ch = 'a'; ch <= 'z'; ch++)
 	{
 		putchar(ch);
-		char capitalLetter = toupper(ch); 
-		putchar(capitalLetter);
+		char capitalLetter = toupper(ch);
+	putchar(capitalLetter);
 		putchar('\n');
 	}
 	return (0);
