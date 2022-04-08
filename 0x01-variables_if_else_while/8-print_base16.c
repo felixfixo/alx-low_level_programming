@@ -12,7 +12,7 @@ int main(void)
 	while (number < 16)
 	{
 		int hexadecimal =  number % 16;
-		putchar(hexadecimal + '0');
+		putchar(hexadecimal);
 		putchar('\n');
 		number++;
 	}
