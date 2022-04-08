@@ -14,10 +14,10 @@ int main(void)
 
 	while (i <= 9)
 	{
-		// if (y == 8 && z == 9 )
-		// {
-		// 	break;
-		// }
+		if (y == 8 && z == 9 )
+		{
+			break;
+		}
 		putchar(y + '0');
 		putchar(z + '0');
 		putchar(',');
