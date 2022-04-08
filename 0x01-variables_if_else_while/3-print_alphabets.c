@@ -8,12 +8,14 @@
  */
 int main(void)
 {
-	for (char ch = 'a'; ch <= 'z'; ch++)
+	char ch;
+
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		putchar(ch);
 		char capitalLetter = toupper(ch);
 	putchar(capitalLetter);
-		putchar('\n');
 	}
+	putchar('\n');
 	return (0);
 }
