@@ -23,7 +23,7 @@ int main(void)
 			int hexadecimal =  base_digits[i] % 16;
 			putchar(hexadecimal + '0');
 		}
-		putchar('\n');
 	}
+	putchar('\n');
 	return (0);
 }
