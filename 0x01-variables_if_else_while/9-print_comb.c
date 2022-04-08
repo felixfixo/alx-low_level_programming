@@ -18,6 +18,10 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
+		else
+		{
+			putchar(' ');
+		}
 		number++;
 	}
 	return (0);
