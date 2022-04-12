@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "main.h"
 
 /**
  * main - Main entry point of execution in C
