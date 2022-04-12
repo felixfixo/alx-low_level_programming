@@ -21,14 +21,3 @@ _putchar('\n');
 i++;
 }
 }
-
-/**
- * main - Entry point of c language
- *
- * Return: Always 0.
- */
-int main(void)
-{
-print_alphabet_x10();
-return (0);
-}
