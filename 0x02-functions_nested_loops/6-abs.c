@@ -12,7 +12,7 @@ int int _abs(int)
 int a;
 
 a = abs(5);
-return a;
+return (a);
 }
 
 /**
