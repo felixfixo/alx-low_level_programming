@@ -3,6 +3,7 @@
 
 /**
  * _islower - checks if input char is lowercase.
+ * @c: The number to be checked
  *
  * Return: int.
  */

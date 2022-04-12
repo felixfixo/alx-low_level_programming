@@ -3,6 +3,7 @@
 
 /**
  * _isalpha - checks if input char is alphabet.
+ * @c: The number to be checked
  *
  * Return: int.
  */

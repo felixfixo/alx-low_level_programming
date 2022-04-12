@@ -4,13 +4,11 @@
 
 /**
  * _abs - print absolute value.
+ * @n: The number to be checked
  *
  * Return: int.
  */
-int _abs(int)
+int _abs(int n)
 {
-int a;
-
-a = abs(5);
-return (a);
+return (abs(n));
 }
