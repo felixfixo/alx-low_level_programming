@@ -14,11 +14,11 @@ while (n <= 98)
 {
 if (n != 98)
 {
-printf("%d, ");
+printf("%d, ", n);
 }
 else
 {
-printf("%d");
+printf("%d", n);
 }
 
 n++;
@@ -30,11 +30,11 @@ while (n > 98)
 {
 if (n != 98)
 {
-printf("%d, ");
+printf("%d, ", n);
 }
 else
 {
-printf("%d");
+printf("%d", n);
 }
 
 n--;
@@ -42,7 +42,7 @@ n--;
 }
 else if (n == 98)
 {
-printf("%d");
+printf("%d", n);
 }
 printf("\n");
 
