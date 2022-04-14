@@ -6,15 +6,12 @@
  */
 int main(void)
 {
- int i;
+int i;
 
-i = 0;
-while (i < 10)
+for (i = 0; i < 10; i++)
 {
-    i++;
-    printf("%d\n", i / 2);
+    printf("%d\n", i * 2);
 }
-
 	//printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
