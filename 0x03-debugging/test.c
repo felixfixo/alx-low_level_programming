@@ -7,6 +7,7 @@
 
 int main(void)
 {
+       printf("testing");
 int i;
 
 i = 9;
