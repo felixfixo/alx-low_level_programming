@@ -8,10 +8,11 @@ int main(void)
 {
 int i;
 
-for (i = 0; i < 10; i++)
+i = 0;
+while (i < 10)
 {
-    printf("%d\n", i * 2);
-}
-	//printf("with proper grammar, but the outcome is a piece of art,\n");
+    i++;
+    printf("%d", i / 2);
+}//printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
