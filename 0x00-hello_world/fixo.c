@@ -12,6 +12,7 @@ int i;
     {
         printf("%d\n", i);
     }
+    printf("%d\n\n", i);
     return(i);
 
 }
