@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-    int i;
+ int i;
 
-i = -9;
-while (i < 0)
+i = 0;
+while (i < 10)
 {
-    printf("%d\n", -i);
     i++;
+    printf("%d\n", i / 2);
 }
 
 	//printf("with proper grammar, but the outcome is a piece of art,\n");
