@@ -8,18 +8,16 @@
  */
 void print_most_numbers(void)
 {
-int i = 0;
+char n = 0;
 
-for (; i <= 9; i++)
+while (n <= 9)
 {
-if (i == 2 || i == 4)
+if (n != 2 && n != 4)
 {
-continue;
+_putchar('0' + n);
 }
-else
-{
-_putchar(i + '0');
-}
+
+n++;
 }
 _putchar('\n');
 }
