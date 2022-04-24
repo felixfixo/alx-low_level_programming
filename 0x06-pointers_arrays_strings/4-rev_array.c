@@ -5,8 +5,8 @@
  * Prototype: void reverse_array(int *a, int n);
  * Where n is the number of elements of the array
  *
- * @a - Pointer to int params
- * @n - Pointer to int params
+ * @a: - Pointer to int params
+ * @n: - Pointer to int params
  * Return: no
  */
 void reverse_array(int *a, int n)
