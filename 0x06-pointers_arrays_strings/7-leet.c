@@ -8,7 +8,7 @@
  * Letters t and T should be replaced by 7
  * Letters l and L should be replaced by 1
  *
- * @s - Pointer to char params
+ * @s: - Pointer to char params
  * Return: *s
  */
 char *leet(char *s)

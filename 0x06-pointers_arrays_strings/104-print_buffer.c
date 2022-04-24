@@ -3,7 +3,7 @@
 
 /**
  * isPrintableASCII - Determines if n is a printable ASCII char
- * @n - integer
+ * @n: - integer
  * Return: int
  */
 int isPrintableASCII(int n)
@@ -13,9 +13,9 @@ return (n >= 32 && n <= 126);
 
 /**
  * printHexes - Prints hex values for string b in formatted form
- * @b - string to print
- * @start - starting position
- * @end - ending position
+ * @b: - string to print
+ * @start: - starting position
+ * @end: - ending position
  */
 void printHexes(char *b, int start, int end)
 {
@@ -65,8 +65,8 @@ i++;
 
 /**
  * print_buffer - Prints a buffer
- * @b - string
- * @size - size of buffer
+ * @b: - string
+ * @size: - size of buffer
  */
 void print_buffer(char *b, int size)
 {
