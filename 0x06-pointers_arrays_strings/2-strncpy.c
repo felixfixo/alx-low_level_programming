@@ -5,12 +5,12 @@
  *  Prototype: char *_strncpy(char *dest, char *src, int n);
  *  Your function should work exactly like strncpy
  *
- * @dest - pointer to char params
- * @src - pointer to char params
- * @n - int params
+ * @dest: - pointer to char params
+ * @src: - pointer to char params
+ * @n: - int params
+ *
  * Return: *dest
  */
-
 char *_strncpy(char *dest, char *src, int n)
 {
 int i;
