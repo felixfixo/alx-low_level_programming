@@ -2,16 +2,18 @@
 
 void print(int nb)
 {
-    printf("%d", nb);
-    nb ++;
-    if (nb < 10) 
+    if (nb < 0) 
     {
-        print(nb);
+        return;
     }
+    printf("%d", nb);
+    nb --;
+    print(nb);
 }
 
 int main(void)
 {
     print(4);
+      printf("\n");
     return (0);
 }
