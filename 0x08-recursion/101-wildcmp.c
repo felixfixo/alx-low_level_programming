@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * wildcmp - Compare two strings allowing for wildcard char
- *
- * @s1: String being compared
- *
+ * wildcmp - function that compares two strings
+ * and returns 1 if the strings can be considered identical,
+ * otherwise return 0
+ * @s1:- String being compared
  * @s2: String being compared against
  *
  * Return: 1 if considered identical, 0 otherwise
  */
-
 int wildcmp(char *s1, char *s2)
 {
 if (*s1 == '\0' && *s2 == '\0')
