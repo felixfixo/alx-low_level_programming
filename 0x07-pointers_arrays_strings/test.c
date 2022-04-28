@@ -3,8 +3,8 @@
 void print(int nb)
 {
     printf("%d", nb);
-    -- nb;
-    if (nb > 0) 
+    nb ++;
+    if (nb < 10) 
     {
         print(nb);
     }
