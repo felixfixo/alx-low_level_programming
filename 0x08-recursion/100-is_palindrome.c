@@ -18,7 +18,8 @@ return (n);
 }
 
 /**
- * is_palindrome - cunction that returns 1 if a string is a palindrome and 0 if not.
+ * is_palindrome - cunction that returns 1 if a string is
+ * a palindrome and 0 if not.
  * @s: string to check
  * Return: 0 or 1
  */
