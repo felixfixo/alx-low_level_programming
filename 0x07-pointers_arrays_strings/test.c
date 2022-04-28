@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-void print(int nb)
+int print(int nb)
 {
     if (nb < 0) 
     {
-        return;
+        return (0);
     }
-    printf("%d", nb);
+    printf("%d", nb + print(nb - 1));
     nb --;
-    print(nb);
+    return (nb);
 }
 
 int main(void)
