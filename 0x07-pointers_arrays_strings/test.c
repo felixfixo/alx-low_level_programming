@@ -3,7 +3,7 @@
 void print(int nb)
 {
     printf("%d", nb);
-    nb --;
+    -- nb;
     if (nb > 0) 
     {
         print(nb);
@@ -12,6 +12,6 @@ void print(int nb)
 
 int main(void)
 {
-    print(2);
+    print(4);
     return (0);
 }
