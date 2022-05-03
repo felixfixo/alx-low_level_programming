@@ -12,13 +12,10 @@
 int main(int argc, char *argv[])
 {
 
-if (argc > 1)
-{
 int count;
 
 for (count = 1; count < argc; count++)
 {
 printf("%s\n", argv[count]);
-}
 }
 }
