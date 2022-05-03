@@ -11,11 +11,13 @@
  */
 int main(int argc, char *argv[])
 {
+int i = 0;
 
-int count;
-
-for (count = 1; count < argc; count++)
+while (argc--)
 {
-printf("%s\n", argv[count]);
+printf("%s\n", argv[i]);
+i++;
 }
+
+return (0);
 }
