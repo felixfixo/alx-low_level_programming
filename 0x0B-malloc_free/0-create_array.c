@@ -14,21 +14,24 @@
  */
 char *create_array(unsigned int size, char c)
 {
-char *p;
-unsigned int i;
+char *array;
+unsigned int index;
 
 if (size == 0)
 {
-return (0);
+return (NULL);
 }
-p = malloc(sizeof(char) * (size));
-if (p == '\0')
+array = malloc(sizeof(char) * size);
+
+if (array == NULL)
 {
-return (0);
+return (NULL);
 }
-for (i = 0; i < size; i++)
+
+for (index = 0; index < size; index++)
 {
-p[i] = c;
+array[index] = c;
 }
-return (p);
+
+return (array);
 }
