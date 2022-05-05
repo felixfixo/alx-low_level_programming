@@ -91,8 +91,8 @@ if (!f)
 return (NULL);
 }
 i = 0;
-performMoreOperations(str, len, **f,
-	*col, count, j, k);
+performMoreOperations(str, len, f,
+	col, count, j, k);
 *(f + j) = NULL;
 return (f);
 }
