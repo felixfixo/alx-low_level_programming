@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * strtow - function that splits a string into words.
+ * performMoreOperations - function that splits a string into words.
  * The function returns a pointer to an array of strings (words)
  * Each element of this array should contain a single word,
  * null-terminated
@@ -12,10 +12,15 @@
  * If your function fails, it should return NULL
  *
  * @str: - Pointer to string params
+ * @len: - length
+ * @f: - Pointer to string params
+ * @count: - used in loop
+ * @k: - used in loop
+ * @j: - used in loop
  * Return: - char
  */
-
-char **performMoreOperations(char *str, int len, char **f, int count, int j, int k)
+char **performMoreOperations(char *str, int len, char **f,
+	int count, int j, int k)
 {
 char *col;
 while (*str)
@@ -59,6 +64,19 @@ j++;
 return (f);
 }
 
+/**
+ * strtow - function that splits a string into words.
+ * The function returns a pointer to an array of strings (words)
+ * Each element of this array should contain a single word,
+ * null-terminated
+ * The last element of the returned array should be NULL
+ * Words are separated by spaces
+ * Returns NULL if str == NULL or str == ""
+ * If your function fails, it should return NULL
+ *
+ * @str: - Pointer to string params
+ * Return: - char
+ */
 char **strtow(char *str)
 {
 int i = 0, j = 0, k = 0;
