@@ -54,6 +54,8 @@ if (j < (count - 1))
 j++;
 }
 }
+*(f + j) = NULL;
+return (f);
 }
 
 char **strtow(char *str)
@@ -93,6 +95,5 @@ return (NULL);
 i = 0;
 performMoreOperations(str, len, f,
 	col, count, j, k);
-*(f + j) = NULL;
-return (f);
+
 }
