@@ -15,7 +15,7 @@
  * Return: - char
  */
 
-char **performMoreOperations(char *str, int len, char **f, char *col, int count, int i, int j, int k)
+char **performMoreOperations(char *str, int len, char **f, char *col, int count, int j, int k)
 {
 while (*str)
 {
@@ -91,8 +91,8 @@ if (!f)
 return (NULL);
 }
 i = 0;
-performMoreOperations(*str, len, **f,
-	*col, count, i, j, k);
+performMoreOperations(str, len, **f,
+	*col, count, j, k);
 *(f + j) = NULL;
 return (f);
 }
