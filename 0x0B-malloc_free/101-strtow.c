@@ -15,7 +15,7 @@
  * Return: - char
  */
 
-void performMoreOperations(char *str, int len, char **f, char *col, int count, int i, int j, int k)
+char **performMoreOperations(char *str, int len, char **f, char *col, int count, int i, int j, int k)
 {
 while (*str)
 {
