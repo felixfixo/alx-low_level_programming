@@ -1,24 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - length of a string
- * @s: input char
- * Return: length of a string
- */
-
-int _strlen(char *s)
-{
-int l = 0;
-
-while (*s != '\0')
-{
-s++;
-l++;
-}
-return (l);
-}
-
-/**
 * str_concat - unction that concatenates two strings.
 * The returned pointer should point to a newly allocated space
 * in memory which contains the contents of s1, followed by the
@@ -32,41 +14,39 @@ return (l);
 */
 char *str_concat(char *s1, char *s2)
 {
-unsigned int l1, l2;
-char *conc, *tmp;
+char *concat_str;
+int index, concat_index = 0,  len = 0;
 
-if (!s1)
+if (s1 == NULL)
 {
 s1 = "";
 }
-else
-{
-l1 = _strlen(s1);
-}
 
-if (!s2)
+if (s2 == NULL)
 {
 s2 = "";
 }
-else
+
+for (index = 0; s1[index] || s2[index]; index++)
 {
-l2 = _strlen(s2);
+len++;
 }
 
-conc = malloc(l1 + l2 + 1);
-if (!conc)
+concat_str = malloc(sizeof(char) * len);
+
+if (concat_str == NULL)
 {
-return (0);
+return (NULL);
 }
 
-tmp = conc;
-while (*s1)
+for (index = 0; s1[index]; index++)
 {
-*tmp++ = *s1++;
+concat_str[concat_index++] = s1[index];
 }
 
-while ((*tmp++ = *s2++))
-	;
-
-return (conc);
+for (index = 0; s2[index]; index++)
+{
+concat_str[concat_index++] = s2[index];
+}
+return (concat_str);
 }
