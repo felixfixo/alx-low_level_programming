@@ -2,25 +2,26 @@
 #include "main.h"
 
 /**
- * _strlen - length of a string
- * @s: input char
- * Return: length of a string
- */
-
-int _strlen(char *s)
+*len - returns length of str
+*@str: string counted
+*Return: returns the length
+*/
+int len(char *str)
 {
-	int l = 0;
+int len = 0;
 
-	while (*s != '\0')
-	{
-		s++;
-		l++;
-	}
-	return (l);
+if (str != NULL)
+{
+while (str[len])
+{
+len++;
+}
+}
+return (len);
 }
 
 /**
- * argstostr -function that concatenates all the arguments
+ * argstostr - function that concatenates all the arguments
  * of your program.
  * Returns NULL if ac == 0 or av == NULL
  * Returns a pointer to a new string, or NULL if it fails
@@ -32,38 +33,37 @@ int _strlen(char *s)
  */
 char *argstostr(int ac, char **av)
 {
-int i, j, k;
-int len, R = 0;
-char *p;
+char *new_string = NULL;
+int k = 0, i = ac, j, sum = 0, temp = 0;
 
-if (!ac || !av)
-{
-return (NULL);
-}
-R = 0;
-
-for (i = 0; i < ac; i++)
-{
-len = _strlen(av[i]) + 1;
-R += len;
-}
-p = malloc(sizeof(char) * R + 1);
-
-if (!p)
+if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
 
-for (i = 0; i < ac; i++)
+while (ac--)
 {
-len = _strlen(av[i]);
+sum += (len(av[ac]) + 1);
+}
+new_string = (char *) malloc(sum + 1);
 
-for (j = 0; j < len; j++, k++)
+if (new_string != NULL)
 {
-	p[k] = av[i][j];
+while (k < i)
+{
+for (j = 0; av[k][j] != '\0'; j++)
+{
+new_string[j + temp] = av[k][j];
 }
-p[k++] = '\n';
+new_string[temp + j] = '\n';
+temp += (j + 1);
+k++;
 }
-p[k] = '\0';
-return (p);
+new_string[temp] = '\0';
+}
+else
+{
+return (NULL);
+}
+return (new_string);
 }
