@@ -15,8 +15,9 @@
  * Return: - char
  */
 
-char **performMoreOperations(char *str, int len, char **f, char *col, int count, int j, int k)
+char **performMoreOperations(char *str, int len, char **f, int count, int j, int k)
 {
+char *col;
 while (*str)
 {
 while (*str == ' ' && *str)
@@ -95,6 +96,6 @@ return (NULL);
 i = 0;
 
 performMoreOperations(str, len, f,
-	col, count, j, k);
+	count, j, k);
 return (f);
 }
