@@ -2,6 +2,67 @@
 #include "main.h"
 
 /**
+ * _strlen - find length of a string
+ * @s: string
+ * Return: int
+ */
+int _strlen(char *s)
+{
+int size = 0;
+for (; s[size] != '\0'; size++);
+return (size);
+}
+
+/**
+ * *str_concat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer
+ */
+char *str_addChar (char *str, char c)
+{
+int size, i;
+char *m;
+
+size = _strlen(str);
+
+m = malloc((size + 1) * sizeof(char) + 1);
+if (m == 0)
+{
+return (0);
+}
+
+for (i = 0; i <= size; i++)
+{
+m[i] = str[i];
+}
+
+m[i + 1] = c;
+m[i + 2] = '\0';
+return (m);
+}
+
+/**
+ * *nbr_spaces - return the number of occurent of a string
+ * @s: string to check
+ * Return: int
+ */
+unsigned int nbr_spaces(char *s)
+{
+int i, cmpt = 0;
+
+for (i = 0; s[i + 1] != '\0'; i++)
+{
+if (s[i]  == ' ' && s[i + 1] != ' ')
+{
+cmpt++;
+}
+}
+return (cmpt + 1);
+}
+
+
+/**
  * strtow - function that splits a string into words.
  * The function returns a pointer to an array of strings (words)
  * Each element of this array should contain a single word,
@@ -14,80 +75,41 @@
  * @str: - Pointer to string params
  * Return: - char
  */
-
 char **strtow(char *str)
 {
-int i = 0, j = 0, k = 0;
-int len = 0, count = 0;
-char **f, *col;
+int i;
+int spaces = nbr_spaces(str);
+char **tokens = NULL;//malloc(sizeof(char *) * (spaces));
+char *token;
+int checkingSpace = 0;
+int word = 0;
 
-if (!str || !*str)
+if (!tokens)
 {
-return (NULL);
+return (0);
 }
-
-while (*(str + i))
+	
+for (i = 0; str[i] != '\0'; i++)
 {
-if (*(str + i) != ' ')
+if (str[i] == ' ')
 {
-if (*(str + i + 1) == ' ' || *(str + i + 1) == 0)
+if (checkingSpace == 0)
 {
-count += 1;
+word++;
+checkingSpace = 1;
+} 
 }
-}
-i++;
-}
-
-if (count == 0)
+else
 {
-return (NULL);
-}
-count += 1;
-f = malloc(sizeof(char *) * count);
-
-if (!f)
-{
-return (NULL);
-}
-i = 0;
-
-while (*str)
-{
-while (*str == ' ' && *str)
-{
-	str++;
-}
-len = 0;
-
-while (*(str + len) != ' ' && *(str + len))
-{
-len += 1;
-}
-len += 1;
-col = malloc(sizeof(char) * len);
-
-if (!col)
-{
-for (k = j - 1; k >= 0; k--)
-{
-free(f[k]);
-}
-free(f);
-return (NULL);
+printf("1");
+token = tokens[word];
+free(tokens[word]);
+str_addChar(token, str[i]);
+checkingSpace = 0;
 }
 
-for (k = 0; k < (len - 1);  k++)
-{
-*(col + k) = *(str++);
 }
-*(col + k) = '\0';
-*(f + j) = col;
 
-if (j < (count - 1))
-{
-j++;
-}
-}
-*(f + j) = NULL;
-return (f);
+tokens[i] = NULL;
+return (tokens);
 }
