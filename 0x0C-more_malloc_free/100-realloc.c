@@ -28,7 +28,7 @@ return (ptr);
 if (new_size == 0 && ptr != NULL)
 {
 free(ptr);
-return (0); 
+return (0);
 }
 relloc = malloc(new_size);
 if (relloc == NULL)
