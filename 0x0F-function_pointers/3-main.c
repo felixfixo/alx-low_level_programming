@@ -5,7 +5,7 @@
 /**
 * main - Returns results of the program execution
 * You are not allowed to code any other function than main in this file
-* You are not allowed to directly call op_add, op_sub, op_mul, op_div 
+* You are not allowed to directly call op_add, op_sub, op_mul, op_div
 * or op_mod from the main function
 * You have to use atoi to convert arguments to int
 * You are not allowed to use any kind of loop
@@ -36,8 +36,7 @@ if (get_op_func(op) == NULL || op[1] != '\0')
 printf("Error\n");
 exit(99);
 }
-if ((*op == '/' && num2 == 0) ||
-    (*op == '%' && num2 == 0))
+if ((*op == '/' && num2 == 0) || (*op == '%' && num2 == 0))
 {
 printf("Error\n");
 exit(100);
