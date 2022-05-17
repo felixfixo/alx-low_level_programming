@@ -7,10 +7,13 @@
  * If n == 0, returns 0
  *
  *@n: integer parameter
- *Return: sum of parameters
+ *Return: integer
 */
 int sum_them_all (const unsigned int n, ...)
 {
+if(n == 0){
+return (0);
+}
 va_list ap;
 int i, sum = 0;
 
@@ -21,6 +24,5 @@ for (i = n; i >= 0; i = va_arg(ap, int))
 sum = sum + i;
 }
 va_end(ap);
-return sum;
+return (sum);
 }
-
