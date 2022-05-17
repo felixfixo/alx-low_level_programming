@@ -4,35 +4,41 @@
 #include <stdio.h>
 
 /**
- * print_strings - function that prints anything.
+ * print_strings - function that prints strings, followed by a new line.
  *
  * @separator: separates strings
  * @n: integer parameter
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-va_list list;
 unsigned int i;
-char *c;
-va_start(list, n);
+va_list params;
+char *str;
 
-for (i = 0; i < n; i++)
+va_start(params, n);
+
+for (i = 0; i < (n - 1) && n != 0; i++)
 {
-c = va_arg(list, char*);
-if (c != NULL)
+str = va_arg(params, char *);
+if (!separator)
 {
-printf("%s", c);
+printf("%s", str ? str : "(nil)");
 }
 else
 {
-printf("(nil)");
+printf("%s%s", str ? str : "(nil)", separator);
+}
 }
 
-if (i != n - 1 && separator != NULL)
+if (n)
 {
-printf("%s", separator);
+str = va_arg(params, char *);
+printf("%s\n", str ? str : "(nil)");
 }
+else
+{
+printf("\n");
 }
-va_end(list);
-putchar('\n');
+
+va_end(params);
 }
