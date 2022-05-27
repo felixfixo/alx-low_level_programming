@@ -3,7 +3,7 @@
 
 /**
  * print_listint -function that prints all the elements of a listint_t list.
- * 
+ *
  * @h: linked list
  * Return: the number of nodes
  */
