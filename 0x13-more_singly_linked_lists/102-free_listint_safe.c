@@ -13,32 +13,32 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-size_t len = 0;
-int diff;
+int p_diff;
+size_t i = 0;
 listint_t *temp;
 
-if (!h || !*h)
+if (h == NULL || *h == NULL)
 {
 return (0);
 }
-
 while (*h)
 {
-diff = *h - (*h)->next;
-if (diff > 0)
+p_diff = *h - (*h)->next;
+if (p_diff > 0)
 {
 temp = (*h)->next;
+free(*h);
 *h = temp;
-len++;
+i++;
 }
 else
 {
+free(*h);
 *h = NULL;
-len++;
+i++;
 break;
 }
 }
-
 *h = NULL;
-return (len);
+return (i);
 }
