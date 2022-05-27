@@ -15,7 +15,7 @@ if (head == NULL)
 {
 return;
 }
-ssas
+
 while (*head != NULL)
 {
 currentNode = *head;
