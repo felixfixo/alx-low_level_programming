@@ -13,30 +13,32 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-listint_t *tmp, *actual;
-size_t i;
-int rest;
+size_t len = 0;
+int diff;
+listint_t *temp;
 
-i = 0, actual = *h;
+if (!h || !*h)
+{
+return (0);
+}
 
-while (actual)
+while (*h)
 {
-rest = actual - actual->next;
-if (rest > 0)
+diff = *h - (*h)->next;
+if (diff > 0)
 {
-tmp = actual->next;
-free(actual);
-actual = tmp;
-i++;
-} else
+temp = (*h)->next;
+*h = temp;
+len++;
+}
+else
 {
-free(actual);
 *h = NULL;
-i++;
+len++;
 break;
 }
 }
 
 *h = NULL;
-return (i);
+return (len);
 }
