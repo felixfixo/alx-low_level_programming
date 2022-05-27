@@ -9,17 +9,17 @@
  */
 void free_listint2(listint_t **head)
 {
-listint_t *currentNode;
+listint_t *tmp;
 
-if (head == NULL)
+if (head == NULL || *head == NULL)
 {
 return;
 }
-
-while (*head != NULL)
+while (*head)
 {
-currentNode = *head;
+tmp = *head;
 *head = (*head)->next;
-free(currentNode);
+free(tmp);
 }
+*head = NULL;
 }
