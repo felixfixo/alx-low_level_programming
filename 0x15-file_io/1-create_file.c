@@ -1,6 +1,21 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
+
+/**
+  * _strlen - length of a string
+  * @s: input char
+  * Return: length of a string
+**/
+int _strlen(char *s)
+{
+int i = 0;
+
+while (s[i])
+{
+i++;
+}
+return (i);
+}
+
 
 /**
  * create_file - function that creates a file.
